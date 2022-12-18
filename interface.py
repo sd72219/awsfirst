@@ -20,15 +20,12 @@ def pred():
 
         msg = units.pred_class(x,y,z)
 
-        return render_template('after.html', data=msg)
+        return render_template('after.html', data=int(msg))
+    else:
+        return jsonify({"message":"unsuccessful"})
     
 
 
-
-
-
-
-
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080, debug=False)
+    app.run(host="0.0.0.0", port=8080, debug=True)  
 
