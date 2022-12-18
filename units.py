@@ -1,10 +1,10 @@
 import pickle,os
 
 model_folder_path= "model"
-def pred_class(math_score,reading_score,writing_score):
+def pred_class(x,y,z):
 
-    clf_model = pickle.load(open(f'{model_folder_path}/model.pkl', 'rb'))
-    pred=clf_model.predict([[math_score,reading_score,writing_score]])
+    clf_model = pickle.load(open(f'model.pkl', 'rb'))
+    pred=clf_model.predict([[x,y,z]])
 
     return pred[0]
 

@@ -13,9 +13,9 @@ def pred():
     data = request.form
     if request.method == 'POST':
         print('Input data is:',data)
-        x = int(data['math_score'])
-        y = int(data['reading_score'])
-        z = int(data['writing_score'])
+        x = int(data['x'])
+        y = int(data['y'])
+        z = int(data['z'])
         
 
         msg = units.pred_class(x,y,z)
